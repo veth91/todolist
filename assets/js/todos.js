@@ -22,10 +22,10 @@ $("input[type='text']").keypress(function(event){
 
 //Add new items to list if you click the plus button when the text field is nnot empty
 $(".fa-plus-circle").click(function(){
-	if($("input").val()) { 
-		var todoText = $("input").val();
+	var value = $("input").val()
+	if(value) { 
 		$("input").val("");
-		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
+		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + value + "</li>");
 	} else {
 	$("input[type='text']").fadeToggle();
 	}
